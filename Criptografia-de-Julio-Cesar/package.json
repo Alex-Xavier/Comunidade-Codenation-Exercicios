@@ -1,0 +1,29 @@
+{
+  "name": "criptografia-de-julio-cesar",
+  "version": "1.0.0",
+  "description": "Exercício da Codenation: Criptografia de Júlio César",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cjs": "^0.0.11",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Codenation",
+    "Aceleração ReactJS",
+    "Exercício",
+    "Criptografia",
+    "NodeJS"
+  ],
+  "author": "Alex Xavier",
+  "license": "ISC"
+}
