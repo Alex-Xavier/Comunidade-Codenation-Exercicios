@@ -1,6 +1,7 @@
 const express = require ('express')
 const fetch = require ('node-fetch')
 const fs = require ('fs')
+const fse = require ('fs-extra')
 const caesar = require ('caesar-encrypt')
 const CryptoJS = require ('crypto-js')
 
@@ -20,15 +21,15 @@ caesar.decrypt('pszym', '5')
 
 const hash = CryptoJS.SHA1('you are bound to be unhappy if you optimize everything. donald e. knuth').toString()
 
-const fileBuffer = JSON.parse(fs.readFileSync('answer.json', 'utf-8'))
+let fileBuffer = JSON.parse(fs.readFileSync('answer.json', 'utf-8'))
 
 fileBuffer.decifrado = 'you are bound to be unhappy if you optimize everything. donald e. knuth'
 fileBuffer.resumo_criptografico = hash
 
-console.log(fileBuffer)
-
-fs.writeFile('answer.json', fileBuffer, err => {
+fse.remove('answer.json', err => {
   if (err) {
     return console.error(err)
   }
 })
+
+//, JSON.stringify(fileBuffer)
